@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Link Getter for Markdown",
+  "name": "Albatrosstoi | Link Getter for Markdown",
   "short_name": "md-linkgetter",
   "version": "0.0.1",
   "description": "A extension for getting title and URL from web sites in Markdown format.",
