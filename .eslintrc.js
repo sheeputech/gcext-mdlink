@@ -12,6 +12,7 @@ module.exports = {
   extends: ["eslint:recommended", "plugin:prettier/recommended"],
   plugins: ["prettier"],
   rules: {
+    "no-undef": "warn",
     "prettier/prettier": [
       "error",
       {
