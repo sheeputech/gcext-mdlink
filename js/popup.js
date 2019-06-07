@@ -5,6 +5,8 @@ window.addEventListener('load', () => {
         const pageUrl = curTab.url
         const link = document.getElementById('link')
         link.value = `[${pageTitle}](${pageUrl})`
+        link.select()
+        document.execCommand('copy')
 
         // copy to clipboard
         const clipBtn = document.getElementById('clipBtn')
