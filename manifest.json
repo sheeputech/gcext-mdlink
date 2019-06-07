@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Link Getter for Markdown",
+  "short_name": "md-linkgetter",
+  "version": "0.0.1",
+  "description": "A extension for getting title and URL from web sites in Markdown format.",
+  "icons": {},
+  "browser_action": {
+    "default_icon": {},
+    "default_title": "Link Getter for Markdown",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["tabs"],
+  "author": "Kazumasa Hirata <sheepu.tech@gmail.com>"
+}
