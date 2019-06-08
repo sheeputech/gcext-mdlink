@@ -1,4 +1,4 @@
-# md-linkgetter
+# gcext-mdlink
 A chrome extension to get title and url from the web site in Markdown link format.
 
 ## Reference
@@ -7,7 +7,6 @@ A chrome extension to get title and url from the web site in Markdown link forma
 - [Chrome拡張 ポップアップ画面にCSSとjsを追加する方法 - lisz-works](https://www.lisz-works.com/entry/dev-chrome-extention-popup-add-css-js)
 - [Chrome拡張でポップアップとコンテンツのスクリプト間でデータのやり取りをするサンプル - Qiita](https://qiita.com/inabajunmr/items/d56d3a477b83487222f0)
 - [Chrome拡張機能を作ってみる その2. UIを作成する、設定を保存する - そんな今日この頃の技術ネタ](https://blue1st-tech.hateblo.jp/entry/2016/12/19/090000)
-- [ESLint(あるいはTSLint)とPrettierを併用する - ひと夏の技術](https://tech-1natsu.hatenablog.com/entry/2018/01/07/154941)
 - [ESLint(あるいはTSLint)とPrettierを併用する - ひと夏の技術](https://tech-1natsu.hatenablog.com/entry/2018/01/07/154941)
 - [ESLintについてのメモ - Qiita](https://qiita.com/makotot/items/822f592ff8470408be18)
 - [ESLintを使ってるプロジェクトにPrettierを導入した | yosuke.saito](https://saitoxu.io/2018/01/31/prettier.html)
