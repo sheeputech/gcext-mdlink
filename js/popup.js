@@ -3,16 +3,26 @@ window.addEventListener('load', () => {
         const curTab = tabs[0]
         const pageTitle = curTab.title
         const pageUrl = curTab.url
-        const link = document.getElementById('link')
-        link.value = `[${pageTitle}](${pageUrl})`
-        link.select()
-        document.execCommand('copy')
+        const link = document.getElementById('linkText')
 
-        // copy to clipboard
-        const clipBtn = document.getElementById('clipBtn')
-        clipBtn.addEventListener('click', () => {
-            link.select()
-            document.execCommand('copy')
+        link.value = String(pageTitle)
+        link.select()
+
+        // format markdown link on copy
+        document.addEventListener('copy', e => {
+            e.preventDefault()
+            e.clipboardData.setData('text/plain', `[${pageTitle}](${pageUrl})`)
+        })
+
+        // copy link to clipboard and close popup on Enter pressed
+        link.addEventListener('keypress', e => {
+            e.preventDefault()
+
+            const excludedKeys = [e.shiftKey, e.ctrlKey, e.altKey]
+            if (e.keyCode === 13 && excludedKeys.indexOf(true) === -1) {
+                document.execCommand('copy')
+                window.close()
+            }
         })
     })
 })
