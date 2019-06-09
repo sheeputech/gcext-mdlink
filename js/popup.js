@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
         // format markdown link on copy
         document.addEventListener('copy', e => {
             e.preventDefault()
-            e.clipboardData.setData('text/plain', `[${pageTitle}](${pageUrl})`)
+            e.clipboardData.setData('text/plain', `[${link.value}](${pageUrl})`)
         })
 
         // copy link to clipboard and close popup on Enter pressed
