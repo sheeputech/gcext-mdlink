@@ -12,7 +12,8 @@ window.addEventListener('load', () => {
         document.addEventListener('copy', e => {
             e.preventDefault()
             link = document.getElementById('linkText')
-            e.clipboardData.setData('text/plain', `[${link.value}](${pageUrl})`)
+            const title = link.value.replace(/(\[|\]|<|>|#|\|)/g, '\\$&')
+            e.clipboardData.setData('text/plain', `[${title}](${pageUrl})`)
         })
 
         // copy link to clipboard and close popup on Enter pressed
