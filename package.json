@@ -18,7 +18,6 @@
   },
   "lint-staged": {
     "*.js": [
-      "yarn upgrade",
       "eslint --fix",
       "git add"
     ]
