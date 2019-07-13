@@ -1,11 +1,17 @@
 window.addEventListener('load', () => {
     chrome.tabs.query({ currentWindow: true, active: true }, tabs => {
         const curTab = tabs[0]
-        const pageTitle = curTab.title
         const pageUrl = curTab.url
+        let pageTitle = String(curTab.title)
         let link = document.getElementById('linkText')
 
-        link.value = String(pageTitle)
+        // format title string
+        const t = [[/（/g, '('], [/）/g, ')']]
+        for (let i = 0; i < t.length; i++) {
+            pageTitle = pageTitle.replace(t[i][0], t[i][1])
+        }
+
+        link.value = pageTitle
         link.select()
 
         // format markdown link on copy
