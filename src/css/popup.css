@@ -1,45 +1,9 @@
-html {
-  background-color: white;
-  height: max-content;
-  width: max-content;
-}
+@import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "/node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css";
 
 body {
+  height: max-content;
+  width: 400px;
   margin: 0;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.link-getter {
-  display: grid;
-  grid-template-columns: 50px 300px;
-  grid-template-rows: 30px;
-  align-content: center;
-  justify-content: center;
-  height: 40px;
-  margin: 0 5px;
-}
-
-.link-label {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  color: black;
-  font-family: "Noto Sans CJP JP";
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 0 4px;
-  padding: 4px;
-}
-
-.link-text {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  border: none;
-  outline: none;
-  font-family: "Noto Sans CJK JP";
-  font-weight: normal;
-  margin: 0 4px;
-  padding: 4px;
+  padding: 0;
 }

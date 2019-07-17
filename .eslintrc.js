@@ -7,19 +7,24 @@ module.exports = {
   },
   parserOptions: {
     parser: "babel-eslint",
-    ecmaVersion: 6
+    ecmaVersion: 6,
+    sourceType: "module"
   },
   extends: ["eslint:recommended", "plugin:prettier/recommended"],
   plugins: ["prettier"],
   rules: {
     "no-undef": "warn",
+    "max-len": ["error", { code: 120, ignoreUrls: true }],
     "prettier/prettier": [
       "error",
       {
+        printWidth: 120,
+        tabWidth: 2,
+        useTabs: false,
         semi: false,
         singleQuote: true,
-        tabWidth: 4,
-        trailingComma: false
+        trailingComma: false,
+        bracketSpacing: true
       }
     ]
   }

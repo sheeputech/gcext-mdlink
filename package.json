@@ -8,8 +8,12 @@
     "prettier": "^1.18.0"
   },
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "husky": "^2.4.0",
-    "lint-staged": "^8.2.0"
+    "jquery": "^3.4.1",
+    "lint-staged": "^8.2.0",
+    "open-iconic": "^1.1.1",
+    "popper.js": "^1.15.0"
   },
   "husky": {
     "hooks": {
