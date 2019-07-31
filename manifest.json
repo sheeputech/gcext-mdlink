@@ -1,15 +1,13 @@
 {
   "manifest_version": 2,
+  "author": "Kazumasa Hirata <sheepu.tech@gmail.com>",
   "name": "Albatrosstoi | Markdown Link Generator",
   "short_name": "gcext-mdlink",
   "version": "0.0.1",
   "description": "An extension for getting title and URL from web sites in Markdown format.",
-  "icons": {},
+  "permissions": ["tabs", "storage"],
   "browser_action": {
-    "default_icon": {},
     "default_title": "Markdown Link Generator",
     "default_popup": "src/html/popup.html"
-  },
-  "permissions": ["tabs", "storage"],
-  "author": "Kazumasa Hirata <sheepu.tech@gmail.com>"
+  }
 }

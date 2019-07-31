@@ -1,35 +1,34 @@
 export class LinkStorage {
     constructor() {
-        this.storageKey = 'gcext-mdlink-links'
-        this.links = {}
+        this.key = 'gcext-mdlink-links'
     }
 
-    get() {
+    async get() {
         const self = this
-        return new Promise(function(resolve) {
-            chrome.storage.sync.get([self.storageKey], function(result) {
-                self.links = {}
-                resolve(result[self.storageKey] || {})
+        return await new Promise(function(resolve) {
+            chrome.storage.sync.get([self.key], function(result) {
+                resolve(result[self.key] || [])
             })
         })
     }
 
-    set(obj) {
+    async add(title, url) {
         const self = this
-        return new Promise(function(resolve) {
-            chrome.storage.sync.set({ [self.storageKey]: obj }, function() {
-                self.links = obj
-                resolve(true)
+        const links = await this.get()
+        links.push({ title, url })
+
+        return await new Promise(function(resolve) {
+            chrome.storage.sync.set({ [self.key]: links }, function() {
+                resolve(links)
             })
         })
     }
 
-    clear() {
+    async clear() {
         const self = this
-        return new Promise(function(resolve) {
-            chrome.storage.sync.set({ [self.storageKey]: {} }, function() {
-                self.links = {}
-                resolve(true)
+        return await new Promise(function(resolve) {
+            chrome.storage.sync.set({ [self.key]: [] }, function() {
+                resolve([])
             })
         })
     }
