@@ -10,6 +10,6 @@
     "default_title": "Markdown Link Generator",
     "default_popup": "src/html/popup.html"
   },
-  "permissions": ["tabs"],
+  "permissions": ["tabs", "storage"],
   "author": "Kazumasa Hirata <sheepu.tech@gmail.com>"
 }

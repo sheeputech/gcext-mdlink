@@ -14,16 +14,5 @@
     "lint-staged": "^8.2.0",
     "open-iconic": "^1.1.1",
     "popper.js": "^1.15.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
   }
 }

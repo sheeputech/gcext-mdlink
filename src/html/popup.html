@@ -5,9 +5,18 @@
     <link rel="stylesheet" href="/src/css/popup.css" />
   </head>
   <body>
-    <div class="mx-3 my-2">
-      <input id="linkText" class="form-control" />
-    </div>
+    <section class="mx-3">
+      <input id="linkText" class="form-control my-2" />
+      <div id="linkListSection my-2">
+        <div class="my-2">
+          <label for="linkList">Links</label>
+          <div id="linkList" class="list-group"></div>
+        </div>
+        <button id="linkListClipBtn" type="button" class="btn btn-primary">clip all</button>
+        <button id="linkListClearBtn" type="button" class="btn btn-secondary">clear</button>
+      </div>
+      <button id="closeBtn" type="button" class="btn btn-secondary float-right mb-2">close</button>
+    </section>
     <script src="/src/js/popup.js" type="module"></script>
   </body>
 </html>
